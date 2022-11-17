@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Profile">
+
+
+    <LinearLayout
+        android:id="@+id/aboutTopLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:neumorph_shadowColorDark="@color/shadow_color_bottom"
+            app:neumorph_shadowColorLight="@color/shadow_color_top"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+            <include layout="@layout/cse_dept" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/aboutTopLayoutId"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Design &amp; Developed by:"
+                android:textColor="@color/nav_color"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        <View
+            android:id="@+id/spLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/nav_color"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="3">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/tariqul"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/thankYou_des"
+                    android:text=" Tariqul Islam"
+                    android:drawableLeft="@drawable/ic_user"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/thankYou_des"
+                    android:text="   191002037"
+                    android:drawableLeft="@drawable/ic_id"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/thankYou_title"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="3">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/raju"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/thankYou_des"
+                    android:text=" Abdur Razzak"
+                    android:drawableLeft="@drawable/ic_user"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/thankYou_des"
+                    android:text="   191002206"
+                    android:drawableLeft="@drawable/ic_id"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- ########## Bottom Nav Menu Start ########## -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/nav_color"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/nav_menu" />
+    <!-- ########## Bottom Nav Menu End ########## -->
+
+</RelativeLayout>
